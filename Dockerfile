@@ -2,7 +2,7 @@ FROM debian
 
 MAINTAINER Taivo Käsper <taivo.kasper@gmail.com>
 
-ENV OMNIDB_VERSION 2.1.0
+ENV OMNIDB_VERSION 2.2.0
 
 RUN apt-get update && apt-get install -y curl unzip make build-essential python3-pip libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget llvm libncurses5-dev libncursesw5-dev xz-utils
 RUN curl -Lo /tmp/OmniDB.zip https://github.com/OmniDB/OmniDB/archive/${OMNIDB_VERSION}.zip
