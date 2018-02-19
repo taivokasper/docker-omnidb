@@ -1,5 +1,10 @@
 # docker-omnidb
-[OmniDB](http://www.omnidb.com.br/en_index.html) installed into a Docker container by the [official installation guide](http://www.omnidb.com.br/omnidb-usersguide.pdf).
+[OmniDB](https://www.omnidb.org/en/) installed into a [Docker](https://www.docker.com/) container for easy database management.
+
+## Running
+```bash
+docker run -it --rm -p 8080:8080 taivokasper/omnidb
+```
 
 ## Login
 Default login username: "admin" and password "admin".
