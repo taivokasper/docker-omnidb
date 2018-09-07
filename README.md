@@ -12,8 +12,6 @@
     docker run -it --rm -v config-omnidb:/etc/omnidb -p 8080:8080 -p 25482:25482 taivokasper/omnidb
     ```
 
-
-
 ### Port usage
 
 | Port | Usage |
@@ -23,8 +21,7 @@
 
 ### Configuration persistence
 
-Configuration is located into folder `/etc/omnidb`
-
+Configuration is stored in `/etc/omnidb`
 
 ## Login
 Default login username: "admin" and password "admin".
