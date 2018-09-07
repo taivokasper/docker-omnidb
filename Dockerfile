@@ -14,7 +14,7 @@ RUN apt-get update \
       && rm -rf /var/lib/apt/lists/*
 RUN cd /opt/OmniDB-${OMNIDB_VERSION} && pip3 install --upgrade pip==9.0.3 && echo "Begin install cherrypy" && pip3 install cherrypy && echo "Begin install requirements" && pip3 install -r requirements.txt
 
-EXPOSE 8080
+EXPOSE 8080 25482
 
 WORKDIR /opt/OmniDB-${OMNIDB_VERSION}/OmniDB
 
