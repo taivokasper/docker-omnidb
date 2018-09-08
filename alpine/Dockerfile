@@ -29,7 +29,7 @@ RUN apk del .build-deps \
       && find /usr/local -name '*.a' -delete
 
 
-EXPOSE 8080
+EXPOSE 8080 25482
 
 WORKDIR /opt/OmniDB-${OMNIDB_VERSION}/OmniDB
 
