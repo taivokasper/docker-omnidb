@@ -1,5 +1,5 @@
 # docker-omnidb
-[OmniDB](https://www.omnidb.org/en/) installed into a [Docker](https://www.docker.com/) container for easy database management.
+Minimal [Alpine linux](https://hub.docker.com/_/alpine/) based [Docker](https://www.docker.com/) container running [OmniDB](https://www.omnidb.org/en/) for easy database management through a web interface.
 
 ## Running
 
