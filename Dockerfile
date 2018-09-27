@@ -29,4 +29,4 @@ EXPOSE 8080 25482
 
 WORKDIR /opt/OmniDB-${OMNIDB_VERSION}/OmniDB
 
-CMD python3 omnidb-server.py -p 8080 -d /etc/omnidb
+ENTRYPOINT ["python3", "omnidb-server.py", "--host=0.0.0.0", "--port=8080", "-d", "/etc/omnidb"]
