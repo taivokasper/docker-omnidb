@@ -5,11 +5,11 @@ Minimal [Alpine linux](https://hub.docker.com/_/alpine/) based [Docker](https://
 
 * Without volume mapping
     ```bash
-    docker run -it --rm -p 8080:8080 -p 25482:25482 taivokasper/omnidb
+    docker run -it --rm -p 127.0.0.1:8080:8080 -p 127.0.0.1:25482:25482 taivokasper/omnidb
     ```
 * Using volume for configuration persistence
     ```bash
-    docker run -it --rm -v config-omnidb:/etc/omnidb -p 8080:8080 -p 25482:25482 taivokasper/omnidb
+    docker run -it --rm -v config-omnidb:/etc/omnidb -p 127.0.0.1:8080:8080 -p 127.0.0.1:25482:25482 taivokasper/omnidb
     ```
 
 ### Port usage
