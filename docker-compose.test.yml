@@ -11,6 +11,8 @@ services:
       - lint-tests
     links:
       - omnidb
+      - lint
+      - lint-tests
     command: bash /tests-dir/run-test.sh
 
   lint:
