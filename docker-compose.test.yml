@@ -17,11 +17,13 @@ services:
     image: redcoolbeans/dockerlint
     volumes:
       - ./Dockerfile:/Dockerfile
+    command: -p -f /Dockerfile
 
   lint-tests:
     image: redcoolbeans/dockerlint
     volumes:
       - ./test/Dockerfile:/Dockerfile
+    command: -p -f /Dockerfile
 
   omnidb:
     build: .
