@@ -11,6 +11,8 @@ services:
       - lint-tests
     links:
       - omnidb
+      - lint
+      - lint-tests
     command: python3 /tests-dir/test-omnidb.py
 
   lint:
