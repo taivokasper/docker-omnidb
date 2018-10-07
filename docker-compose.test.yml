@@ -7,9 +7,21 @@ services:
       - ./test:/tests-dir
     depends_on:
       - omnidb
+      - lint
+      - lint-tests
     links:
       - omnidb
     command: python3 /tests-dir/test-omnidb.py
+
+  lint:
+    image: redcoolbeans/dockerlint
+    volumes:
+      - ./Dockerfile:/Dockerfile
+
+  lint-tests:
+    image: redcoolbeans/dockerlint
+    volumes:
+      - ./test/Dockerfile:/Dockerfile
 
   omnidb:
     build: .
