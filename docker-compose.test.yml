@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  sut:
+    build: ./test
+    volumes:
+      - ./test:/tests-dir
+    depends_on:
+      - omnidb
+    links:
+      - omnidb
+    command: bash /tests-dir/run-test.sh
+
+  omnidb:
+    build: .
