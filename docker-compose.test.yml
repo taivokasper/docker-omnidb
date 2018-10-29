@@ -9,7 +9,7 @@ services:
       - omnidb
     links:
       - omnidb
-    command: bash /tests-dir/run-test.sh
+    command: python3 /tests-dir/test-omnidb.py
 
   omnidb:
     build: .
