@@ -6,10 +6,10 @@ services:
     volumes:
       - ./test:/tests-dir
     depends_on:
-      - omnidb
+      - alpine-omnidb
     links:
-      - omnidb
+      - alpine-omnidb
     command: python3 /tests-dir/test-omnidb.py
 
-  omnidb:
-    build: .
+  alpine-omnidb:
+    build: ./alpine
