@@ -17,12 +17,15 @@ RUN apk add --no-cache --virtual .build-deps curl unzip g++ python3-dev \
       && mkdir /etc/omnidb\
       && cd /opt/OmniDB-${OMNIDB_VERSION} \
       && pip3 install --upgrade pip==9.0.3 \
-      && echo "Begin install cherrypy" \
       && pip3 install cherrypy \
-      && echo "Begin install requirements" \
       && pip3 install -r requirements.txt\
       && apk del .build-deps \
-      && find /usr/local -name '*.a' -delete
+      && find /usr/local -name '*.a' -delete \
+      && addgroup -S omnidb && adduser -S omnidb -G omnidb \
+      && chown -R omnidb:omnidb /opt/OmniDB-${OMNIDB_VERSION} \
+      && chown -R omnidb:omnidb /etc/omnidb
+
+USER omnidb
 
 EXPOSE 8080 25482
 
