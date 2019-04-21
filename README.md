@@ -1,3 +1,7 @@
+[![](https://img.shields.io/docker/cloud/build/taivokasper/omnidb.svg)](https://cloud.docker.com/repository/docker/taivokasper/omnidb/general "Build")
+[![](https://images.microbadger.com/badges/version/taivokasper/omnidb.svg)](https://hub.docker.com/r/taivokasper/omnidb/tags "Lates version")
+[![](https://images.microbadger.com/badges/image/taivokasper/omnidb.svg)](https://hub.docker.com/r/taivokasper/omnidb "Image info")
+
 # docker-omnidb
 Minimal [Alpine linux](https://hub.docker.com/_/alpine/) based [Docker](https://www.docker.com/) container running [OmniDB](https://www.omnidb.org/en/) for easy database management through a web interface.
 
