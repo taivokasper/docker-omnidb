@@ -3,7 +3,7 @@
 [![](https://images.microbadger.com/badges/image/taivokasper/omnidb.svg)](https://hub.docker.com/r/taivokasper/omnidb "Image info")
 
 # docker-omnidb
-Minimal [Alpine linux](https://hub.docker.com/_/alpine/) based [Docker](https://www.docker.com/) container running [OmniDB](https://www.omnidb.org/en/) for easy database management through a web interface.
+Minimal [Alpine linux](https://hub.docker.com/_/alpine/) based [Docker](https://www.docker.com/) container running [OmniDB](https://www.omnidb.org/en/) for easy database management via web interface.
 
 ## Running
 
