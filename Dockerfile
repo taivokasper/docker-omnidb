@@ -1,4 +1,4 @@
-FROM alpine:3.9
+FROM alpine:3.10
 
 MAINTAINER Taivo Käsper <taivo.kasper@gmail.com>
 
