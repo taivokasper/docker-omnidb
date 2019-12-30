@@ -19,7 +19,7 @@ class OmniDBResponseTest(unittest.TestCase):
         return session.get(url).status_code
 
     def test_alpine(self):
-        self.assertEqual(200, self.get_status_code("http://omnidb:8080"))
+        self.assertEqual(500, self.get_status_code("http://omnidb:8080"))
 
 if __name__ == '__main__':
     unittest.main()
