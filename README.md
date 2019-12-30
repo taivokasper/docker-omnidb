@@ -33,5 +33,3 @@ Default login username: "admin" and password "admin".
 
 ## Docker Hub
 Available for pulling from [Docker Hub](https://hub.docker.com/r/taivokasper/omnidb/).
-
-
