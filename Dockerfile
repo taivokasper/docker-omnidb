@@ -1,8 +1,8 @@
-FROM alpine:3.10
+FROM alpine:3.11
 
 MAINTAINER Taivo Käsper <taivo.kasper@gmail.com>
 
-ENV OMNIDB_VERSION 2.16.0
+ENV OMNIDB_VERSION 2.17.0
 
 RUN apk add --no-cache --virtual .build-deps curl unzip g++ python3-dev \
       && apk add --no-cache make wget llvm \
