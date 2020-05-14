@@ -22,7 +22,9 @@ RUN apk add --no-cache --virtual .build-deps curl unzip g++ python3-dev \
       && find /usr/local -name '*.a' -delete \
       && addgroup -S omnidb && adduser -S omnidb -G omnidb \
       && chown -R omnidb:omnidb /opt/OmniDB-${OMNIDB_VERSION} \
-      && chown -R omnidb:omnidb /etc/omnidb
+      && chown -R omnidb:omnidb /etc/omnidb \
+      && ln -s /etc/omnidb/.my.cnf /home/omnidb/.my.cnf \
+      && ln -s /etc/omnidb/.pgpass /home/omnidb/.pgpass
 
 USER omnidb
 
