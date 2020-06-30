@@ -1,5 +1,5 @@
 [![](https://img.shields.io/docker/cloud/build/taivokasper/omnidb.svg)](https://cloud.docker.com/repository/docker/taivokasper/omnidb/general "Build")
-[![](https://images.microbadger.com/badges/version/taivokasper/omnidb.svg)](https://hub.docker.com/r/taivokasper/omnidb/tags "Lates version")
+[![](https://images.microbadger.com/badges/version/taivokasper/omnidb.svg)](https://hub.docker.com/r/taivokasper/omnidb/tags "Latest version")
 [![Docker Pulls](https://img.shields.io/docker/pulls/taivokasper/omnidb)](https://hub.docker.com/r/taivokasper/omnidb "Image info")
 [![](https://images.microbadger.com/badges/image/taivokasper/omnidb.svg)](https://hub.docker.com/r/taivokasper/omnidb "Image info")
 
