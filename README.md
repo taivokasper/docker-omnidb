@@ -1,7 +1,6 @@
-[![](https://img.shields.io/docker/cloud/build/taivokasper/omnidb.svg)](https://cloud.docker.com/repository/docker/taivokasper/omnidb/general "Build")
-[![](https://images.microbadger.com/badges/version/taivokasper/omnidb.svg)](https://hub.docker.com/r/taivokasper/omnidb/tags "Latest version")
+[![master branch build status](https://github.com/taivokasper/docker-omnidb/actions/workflows/docker-image.yml/badge.svg?branch=master)](https://github.com/taivokasper/docker-omnidb/actions "Github Actions")
 [![Docker Pulls](https://img.shields.io/docker/pulls/taivokasper/omnidb)](https://hub.docker.com/r/taivokasper/omnidb "Image info")
-[![](https://images.microbadger.com/badges/image/taivokasper/omnidb.svg)](https://hub.docker.com/r/taivokasper/omnidb "Image info")
+[![Github tag](https://badgen.net/github/tag/taivokasper/docker-omnidb)](https://hub.docker.com/repository/docker/taivokasper/omnidb/tags?page=1&ordering=last_updated "Latest tag")
 
 # docker-omnidb
 Minimal [Alpine linux](https://hub.docker.com/_/alpine/) based [Docker](https://www.docker.com/) container running [OmniDB](https://www.omnidb.org/en/) for easy database management via web interface.

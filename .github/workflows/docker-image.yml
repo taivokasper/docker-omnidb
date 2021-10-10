@@ -1,16 +1,38 @@
-name: Docker Image CI
+name: CI Build
 
 on:
   push:
     branches: [master]
+    tags:
+      - v*
   pull_request:
     branches: [master]
 
 jobs:
-  build:
+  build_and_release:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag taivokasper/omnidb:${GITHUB_SHA}
+        run: docker build . --file Dockerfile --tag taivokasper/omnidb:latest
+      
+      # Pusblish steps
+      - name: Login to Docker Hub
+        if: ${{ github.event_name != 'pull_request' && startsWith(github.ref, 'refs/tags/v')}}
+        uses: docker/login-action@v1
+        with:
+          username: taivokasper
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Set version env
+        if: ${{ github.event_name != 'pull_request' && startsWith(github.ref, 'refs/tags/v')}}
+        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+
+      - name: Tag the Docker image
+        if: ${{ github.event_name != 'pull_request' && startsWith(github.ref, 'refs/tags/v')}}
+        run: docker tag taivokasper/omnidb:latest taivokasper/omnidb:${RELEASE_VERSION}
+
+      - name: Push the Docker image
+        if: ${{ github.event_name != 'pull_request' && startsWith(github.ref, 'refs/tags/v')}}
+        run: docker push --all-tags taivokasper/omnidb
